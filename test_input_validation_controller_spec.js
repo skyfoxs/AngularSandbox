@@ -15,7 +15,9 @@ describe("TestController", function() {
                     'ng-model="subscriberNumber" '+
                     'name="subscriber_number"'+
                     'maxlength="11" '+
-                    'ng-pattern="/^66\\d{9}$/" required />'+
+                    'ng-pattern="/^66\\d{9}$/" '+
+                    'ng-keypress="hideErrorMessage()" '+
+                    'required />'+
             '</form>'
         );
         $compile(doc)($scope);
