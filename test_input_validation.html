@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Test web</title>
+</head>
+<body>
+
+	<div ng-controller="FirstPageController">
+		<h2>{{ heading }}</h2>
+	
+		<div style="width:250px;">
+			<form name="subscriberForm" novalidate>
+				<input 	type="text" 
+						ng-model="subscriberNumber" 
+						name="subscriber_number"
+						maxlength="11" 
+						ng-pattern="/^66\d{9}$/" required
+						ng-blur="getCustomerProfile()" 
+						ng-keypress="hideErrorMessage()"
+						autofocus
+						style="width:100%;">
+			<!-- ng-change cannot use with ng-pattern -->
+			</form>
+			<div 	ng-show="errorMessage" 
+					style="background:red; color:white; width:100%;">
+				{{ errorMessage }}
+			</div>
+		</div>
+		<span>keypress: {{ counter }}</span>
+	</div>
+
+
+	<script src="angular/angular.min.js"></script>
+	<script src="myapp.js"></script>
+	<script src="test_input_validation_controller.js"></script>
+</body>
+</html>

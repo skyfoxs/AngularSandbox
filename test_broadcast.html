@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+</head>
+<body>
+	
+	<div ng-controller="ParentController">
+		<input type="text" ng-model="parentInput" name="parent_input" ng-change="parentChange()">
+		<span> parent get '{{ parentFirstChild }}' form firstChild</span>
+		<span> parent get '{{ parentSecondChild }}' form secondChild</span>
+
+		<div ng-controller="FirstChildController">
+			<input 	type="text" 
+					ng-model="firstChild" 
+					name="first_child" 
+					ng-change="firstChildChange()">
+			<span>from parent broadcast {{ firstChildFromParentBroadcast }}</span><br/>
+			<span>from parent {{ firstChildFromParent }}</span>
+		</div>
+
+		<div ng-controller="SecondChildController">			
+			<input 	type="text" 
+					ng-model="secondChild" 
+					name="second_child" 
+					ng-change="secondChildChange()">	
+
+			<span>from parent broadcast {{ secondChildFromParentBroadcast }}</span><br/>
+			<span>from parent {{ secondChildFromParent }}</span>
+		</div>
+	</div>
+	<script src="angular/angular.min.js"></script>
+	<script src="myapp.js"></script>
+	<script src="test_broadcast_first_child_controller.js"></script>
+	<script src="test_broadcast_second_child_controller.js"></script>
+	<script src="test_broadcast_parent_controller.js"></script>
+	
+</body>
+</html>
