@@ -1,0 +1,32 @@
+*** Settings ***
+Library         Selenium2Library
+Suite Setup     Open Browser    ${TESTSERVER}${HOME_URL}   browser=${BROWSER}
+Suite Teardown  Close Browser
+
+*** Variables ***
+${TESTSERVER}    http://localhost:3333
+${HOME_URL}      /test_input_validation.html
+${BROWSER}       firefox
+
+*** Testcases ***
+Telephone number maximum 11 digit and start with 66
+    Input Text                      subscriber_number    45678912345
+    Click Element                   heading
+    Page Should Contain             invalid
+    Input Text                      subscriber_number    66814819990
+    Click Element                   heading
+    Page Should Not Contain         invalid
+    Input Text                      subscriber_number    6681481999000000
+    Click Element                   heading
+    Textfield Value Should Be       subscriber_number    66814819990
+    Input Text                      subscriber_number    668999
+    Click Element                   heading
+    Page Should Contain             invalid
+    Input Text                      subscriber_number    668asdf
+    Click Element                   heading
+    Page Should Contain             invalid
+    Input Text                      subscriber_number    668999
+    Click Element                   subscriber_number
+    Page Should Not Contain         invalid
+    Click Element                   heading
+    Page Should Contain             invalid
