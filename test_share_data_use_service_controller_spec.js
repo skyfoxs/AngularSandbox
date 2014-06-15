@@ -32,4 +32,12 @@ describe('Test Controller', function(){
 		$aScope.onBlur();
 		expect($bScope.data.tel).toEqual("abc");
 	});
+
+	it('should be two way binding', function(){
+		$aScope.data.name = "";
+		expect($aScope.data.name).toEqual("");
+		expect($bScope.data.name).toEqual("");
+		$bScope.data.name = "test";
+		expect($aScope.data.name).toEqual("test");
+	});
 });
