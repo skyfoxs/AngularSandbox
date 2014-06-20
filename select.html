@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Test select</title>
+</head>
+<body>
+    
+    <div ng-controller="SelectController">
+        <select ng-model="facultyID" 
+                ng-options="faculty.id as faculty.name for faculty in faculties">
+        </select>
+        <span>selected: {{ facultyID }}</span>
+    </div>
+    
+    <script src="angular/angular.min.js"></script>
+    <script src="myapp.js"></script>
+    <script src="src/select_controller.js"></script>
+</body>
+</html>
