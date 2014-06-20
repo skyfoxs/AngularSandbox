@@ -19,13 +19,13 @@ module.exports = function(karma) {
     'angular/angular*.js',
 
     // our app
-    'myapp.js',
-    '*_controller.js',
-    '*_service.js',
+    'src/myapp.js',
+    'src/service/*.js',
+    'src/controller/*.js',
 
     // tests
-    '*_controller_spec.js',
-    '*_service_spec.js',
+    'spec/controller/*.js',
+    'spec/service/*.js',
 	
     // templates
     ],

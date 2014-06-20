@@ -5,7 +5,7 @@ Suite Teardown  Close Browser
 
 *** Variables ***
 ${TESTSERVER}    http://localhost:3333
-${HOME_URL}      /test_input_validation.html
+${HOME_URL}      /html/input_validation.html
 ${BROWSER}       firefox
 
 *** Testcases ***

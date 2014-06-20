@@ -17,7 +17,7 @@
 						maxlength="11" 
 						ng-pattern="/^66\d{9}$/" required
 						ng-blur="getCustomerProfile()" 
-						ng-keypress="hideErrorMessage()"
+						ng-keydown="hideErrorMessage()"
 						autofocus
 						style="width:100%;">
 			<!-- ng-change cannot use with ng-pattern -->
@@ -27,12 +27,12 @@
 				{{ errorMessage }}
 			</div>
 		</div>
-		<span>keypress: {{ counter }}</span>
+		<span>keydown: {{ counter }}</span>
 	</div>
 
 
-	<script src="angular/angular.min.js"></script>
-	<script src="myapp.js"></script>
-	<script src="test_input_validation_controller.js"></script>
+	<script src="../angular/angular.min.js"></script>
+	<script src="../src/myapp.js"></script>
+	<script src="../src/controller/input_validation_controller.js"></script>
 </body>
 </html>

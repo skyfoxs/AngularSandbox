@@ -16,7 +16,7 @@ describe("TestController", function() {
                     'name="subscriber_number"'+
                     'maxlength="11" '+
                     'ng-pattern="/^66\\d{9}$/" '+
-                    'ng-keypress="hideErrorMessage()" '+
+                    'ng-keydown="hideErrorMessage()" '+
                     'required />'+
             '</form>'
         );
