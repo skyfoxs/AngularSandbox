@@ -1,4 +1,4 @@
-myApp.service('DataService', DataService);
+angular.module('myApp').service('DataService', DataService);
 
 function DataService(){
 	var data = {};

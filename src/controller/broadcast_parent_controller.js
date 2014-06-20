@@ -1,4 +1,5 @@
-myApp.controller('ParentController', ParentController);
+angular.module('myApp').controller('ParentController', ParentController);
+
 function ParentController($scope){
 	
 	$scope.parentChange = function(){

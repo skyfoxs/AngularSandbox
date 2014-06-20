@@ -1,4 +1,4 @@
-myApp.service('GetDataService', GetDataService);
+angular.module('myApp').service('GetDataService', GetDataService);
 
 function GetDataService($http){
 	this.getData = function(param, successCallback, errorCallback){

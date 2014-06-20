@@ -1,4 +1,5 @@
-myApp.controller('FirstChildController',FirstChildController);
+angular.module('myApp').controller('FirstChildController',FirstChildController);
+
 function FirstChildController($scope){
 	
 	$scope.firstChildChange = function(){

@@ -1,4 +1,4 @@
-myApp.controller('SelectController', SelectController);
+angular.module('myApp').controller('SelectController', SelectController);
 
 function SelectController($scope){
 	

@@ -1,4 +1,4 @@
-myApp.controller('FirstPageController',FirstPageController);
+angular.module('myApp').controller('FirstPageController',FirstPageController);
 
 function FirstPageController($scope){
 	$scope.heading = "Hello AngularJS";

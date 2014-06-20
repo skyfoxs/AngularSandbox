@@ -1,4 +1,5 @@
-myApp.controller('SecondChildController', SecondChildController);
+angular.module('myApp').controller('SecondChildController', SecondChildController);
+
 function SecondChildController($scope){
 	
 	$scope.secondChildChange = function(){

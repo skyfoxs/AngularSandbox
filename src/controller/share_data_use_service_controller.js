@@ -1,4 +1,4 @@
-myApp.controller('AController', ['$scope', 'DataService', AController]);
+angular.module('myApp').controller('AController', ['$scope', 'DataService', AController]);
 
 function AController($scope, DataService){
 	$scope.data = DataService.getData();
