@@ -20,6 +20,7 @@ module.exports = function(karma) {
 
     // our app
     'src/myapp.js',
+    'src/directives/*.js',
     'src/service/*.js',
     'src/controller/*.js',
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Test popover</title>
+</head>
+<body>
+    
+    <div ng-controller="PopOverController">
+        <form name="myForm" novalidate>
+
+            <span>Valid input: 66814819990</span>
+            <input-subscriber-number 
+                popup-message="popSubscriberNumber" 
+                error-message="errorMessage"
+                model="subscriberNumber"
+                event-blur="validate()"
+                focus="focusSubscriberNumber" >
+            </input-subscriber-number>
+            <br>
+            <button ng-click="focusInput()">Click to Focus</button>
+            
+        </form>
+    </div>
+    
+    <script src="../angular/angular.min.js"></script>
+    <script src="../src/myapp.js"></script>
+    <script src="../src/directives/popover_directive.js"></script>
+    <script src="../src/controller/popover_controller.js"></script>
+</body>
+</html>

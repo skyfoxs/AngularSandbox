@@ -1,0 +1,32 @@
+<div style="width:250px;position:relative;">
+
+    <input  type="text" 
+            id="subscriber_number"
+            name="subscriber_number"
+            ng-model="subscriberNumber" 
+            ng-blur="onBlur()"
+            maxlength="11" 
+            ng-pattern="/^66\d{9}$/" 
+            required
+            autofocus
+            style="width:100%;"
+            focus-me="focusMe"
+            ng-keydown="hideErrorMessage()" />
+    
+    <!-- Popup -->
+    <div  ng-if="showPopupMessage" 
+            style="position:absolute; top:0; left:105%; width: 250px; border:1px solid #f7f0ef; box-shadow:0 0 4px 2px rgba(0,0,0,0.2); background:#fff;">
+        <div style="border-bottom:1px solid #efe0de; padding:3px;background:#f7f0ef;color:#b75445;">
+            {{ popupMessage.title }}
+        </div>
+        <div style="padding:3px;color:#4D6883">
+            {{ popupMessage.body }}
+        </div>
+    </div>
+
+    <div    ng-show="errorMessage" 
+            style="background:#f7f0ef;color:#b75445;border:1px solid #b75445;width:100%;padding:4px;box-sizing: border-box;">
+        {{ errorMessage }}
+    </div>
+    
+</div>
