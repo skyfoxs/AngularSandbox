@@ -1,7 +1,7 @@
 angular.module('myApp').controller('PopOverController', PopOverController);
 
 function PopOverController($scope){
-	$scope.subscriberNumber = "";
+    $scope.subscriberNumber = "";
     $scope.errorMessage = "";
     $scope.focusSubscriberNumber = false;
 
@@ -15,7 +15,6 @@ function PopOverController($scope){
             }
         }else{
             $scope.errorMessage = "Invalid format";
-            
         }
     }
 
