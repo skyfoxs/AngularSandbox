@@ -8,7 +8,7 @@ function AController($scope, DataService){
 	}
 }
 
-myApp.controller('BController', ['$scope', 'DataService', BController]);
+angular.module('myApp').controller('BController', ['$scope', 'DataService', BController]);
 
 function BController($scope, DataService){
 	$scope.data = DataService.getData();
