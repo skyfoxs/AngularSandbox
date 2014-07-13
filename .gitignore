@@ -2,3 +2,4 @@ robot/*.png
 robot/*.html
 robot/*.xml
 node_modules/
+coverage/
